@@ -1,0 +1,5 @@
+Command to view all the folders and files in a specific location: “ ls ”
+Command to view all the last state or changes in the OS: “ ll ”
+Command to view all the last state or changes in the OS: “ ls -ltr ”
+Command to enter into a file or folder location: “ cd space file name ”
+Command to go back to the previous file or folder location: “ cd space .. ”
