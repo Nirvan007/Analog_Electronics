@@ -18,7 +18,7 @@ Linux is an open-source operating system which is the first choice of every tech
 Linux is used extensively by all of the semiconductor-specific companies for chip development and is a must-know skill for Analog and Digital Design Engineers. Hence, in this repository we will be using a Linux environment to design and simulate our Analog designs.
 
 ## Linux Commands
-* Command to view all the folders and files in a specific location: “ <mark>ls</mark> ”
+* Command to view all the folders and files in a specific location: “ `ls` ”
 * Command to view all the last state or changes in the OS: “ ll ”
 * Command to view all the last state or changes in the OS: “ ls -ltr ”
 * Command to enter into a file or folder location: “ cd space file name ”
