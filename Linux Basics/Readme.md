@@ -19,11 +19,31 @@ Linux is used extensively by all of the semiconductor-specific companies for chi
 
 ## Linux Commands
 * Command to view all the folders and files in a specific location: “ `ls` ”
-* Command to view all the last state or changes in the OS: “ ll ”
-* Command to view all the last state or changes in the OS: “ ls -ltr ”
-* Command to enter into a file or folder location: “ cd space file name ”
-* Command to go back to the previous file or folder location: “ cd space .. ”
-* Command to open a specific file: “ gvim space filename ”
+* Command to view all the last state or changes in the OS: “ `ll` ”
+* Command to view all the last state or changes in the OS: “ `ls -ltr` ”
+* Command to enter into a file or folder location: “ `cd space file name` ”
+* Command to go back to the previous file or folder location: “ `cd space ..` ”
+* Command to open a specific file: “ `gvim space filename` ”
+  * In GVIM, when you have opened up a file, there are 2 modes: 
+    * Command mode (Thick blinking bar over the character)
+    * Typing mode (regular line blinking)
+  * NOTE: This change can be made by clicking the `insert` button on the keyboard
+* To save the file in the GVIM, use “ `:w` ” in the command mode
+* To exit the file in the GVIM, use “ `:q` ” in the command mode
+* To search for any character/word in the GVIM, use “ `/searchword` ” in the command mode
+* To delete a line in the GVIM, use “ `dd` ” in the command mode when the blinker is set on that line that has to be deleted.
+* Command to copy a file: “ `cp space filename` ”
+* Command to rename a file: “ `mv space existing_filename space renamed_filename` ”
+* Command to copy a directory: “ `cp space -r space existing_filename space to_filename` ”
+* Command to create a directory: “ `mkdir space folder_name` ”
+* Command to view the present working directory: “ `pwd` ”
+* Command to delete a file: “ `rm space filename` ”
+* Command to delete a folder: “ `rm space -r space folder_name` ”
+* Command to view the first line in a file: “ `head space filename` ”
+* Command to view the last line in a file: “ `tail space filename` ”
+* Command to view the last few line in a file: “ `tail space -no_of_lines space filename` ”
+
+
 
 ## Sources to learn Linux
 * Javapoint.com: <https://www.javatpoint.com/what-is-linux>
