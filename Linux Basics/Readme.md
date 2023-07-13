@@ -42,8 +42,7 @@ Linux is used extensively by all of the semiconductor-specific companies for chi
 * Command to view the first line in a file: “ `head space filename` ”
 * Command to view the last line in a file: “ `tail space filename` ”
 * Command to view the last few line in a file: “ `tail space -no_of_lines space filename` ”
-
-
+* Command to open a file or run a command and then do something more in the terminal: “ `command space &` ”
 
 ## Sources to learn Linux
 * Javapoint.com: <https://www.javatpoint.com/what-is-linux>
