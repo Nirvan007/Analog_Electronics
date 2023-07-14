@@ -1,4 +1,4 @@
-Linux Basics - I <a name="TOP"></a>
+Linux Basics <a name="TOP"></a>
 ===================
 
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/19139479-75a5-436c-8fbf-ef140cb835ab)
