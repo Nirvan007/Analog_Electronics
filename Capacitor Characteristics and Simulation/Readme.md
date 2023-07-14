@@ -16,7 +16,7 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 * To simulate the VTC of a capacitor with a constant current source and a supply voltage of constant 2V DC.
 
 ## Calculations
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/0760263f-1a3b-432e-96eb-2464041f4df9)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/0760263f-1a3b-432e-96eb-2464041f4df9)
 
 ## Procedure
 * Open the Command Interface and create a new library
@@ -51,23 +51,23 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 * To set the initial conditions, select the net and set net with a initial condition and then assign the value
 
 ## Schematic
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/dc91eb91-faa0-4a91-a3c1-4239b302f577)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/dc91eb91-faa0-4a91-a3c1-4239b302f577)
 
 ## Netlist
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/979bb477-4d9b-4fba-a873-b92f3e10ff96)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/979bb477-4d9b-4fba-a873-b92f3e10ff96)
 
 ## Analyses
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/c8945ee2-221d-40ef-84bc-25117df56fa3)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/c8945ee2-221d-40ef-84bc-25117df56fa3)
 
 ### DC
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/bc5561ab-cc39-422a-9c4e-c8e55b93b106)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/bc5561ab-cc39-422a-9c4e-c8e55b93b106)
 
 ### AC Transient
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/08148d57-24fa-41d0-b471-66ece271dd83)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/08148d57-24fa-41d0-b471-66ece271dd83)
 
 ## Output VTC Graph
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/48ac65c5-dd8a-4f2b-a36f-905e3e3bd5e3)
-* ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/5baa6c75-1fc2-4ce7-910f-ca6346a1b42a)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/48ac65c5-dd8a-4f2b-a36f-905e3e3bd5e3)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/5baa6c75-1fc2-4ce7-910f-ca6346a1b42a)
 
 ## Conclusion
 * As calculated in theory, the practical simulation results were the same, that is after a transient analysis of 1ms delay, the capacitor charges linearly until it reaches the 1V mark.
