@@ -23,7 +23,7 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 * To simulate the VTC of a capacitor with a constant current source and a supply voltage of constant 2V DC.
 
 ## Calculations
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/0760263f-1a3b-432e-96eb-2464041f4df9)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/2a73449e-8658-4901-adfc-a49da464aed1)
 
 ## Procedure
 * Open the Command Interface and create a new library
