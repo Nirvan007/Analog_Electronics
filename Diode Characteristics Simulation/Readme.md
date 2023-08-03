@@ -60,9 +60,11 @@ For more information please visit https://www.geeksforgeeks.org/diode/
 ## Procedure
 Step 1: Open the Cadence Virtuoso Design tool.
 Step 2: Create a new library using the CIW window (File -> New -> Library). Attach this library to the gpdk045nm technology node, or any other technology node.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/57809c6f-8723-4d33-bce6-aaa28984dd21)
 
 Step 3: Create a new cell view using the library manager window (File -> New ->Cell View).
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/406aac6b-b968-4e1c-9784-ec3ee15a52f9)
 
 Step 4: Start placing the components from the built-in analoglib component library.
@@ -71,42 +73,59 @@ Components in the schematic:
   2.	Voltage source [vdc] = vd (analoglib) {V = 0.8v to be set in ADE L}
   3.	Ground [gnd] (analoglib)
   4.	Resistor [res] = 1K (analoglib)
+  5.	
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/93e7e361-e0b8-449a-82f5-61df630c5ae3)
 
 Step 6: Connect the components as per the following circuit diagram.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/1a433c8a-9386-46e1-b1f2-79d0a1e955bf)
 
 Step 7: Launch ADE L for simulation
+
 Step 8: Copy the variables from the cell view and set the value of vdc = vd = 800mV.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/102246aa-3220-4bdc-92e8-e68af602c0a0)
 
 Step 9: Choose the analysis method and select the DC analysis and check the “save DC operating points” option.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/2bd0b683-f60f-4112-9cca-7365880bc858)
 
 Step 10: Check the “design variable” option and select the variable “vd”. Set the sweep range from 0 to 1.4.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/4ecb6fb2-e647-4b76-988f-603380a4e0dd)
 
 Step 11: Select the “outputs” menu and then “To be plotted on schematic” option and select the diode’s positive terminal.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/f73dacc0-ec5b-403d-821d-b26dc424375b)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/bf11e79c-bcd0-4404-aa73-016fe66a4e56)
 
 Step 12: Create a netlist.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/16f7b199-27a7-4466-aced-b1a00e1c5f24)
 
 Step 13: Go back to the ADE L and hit the netlist and run option (green play button). The spectre simulation will start, and the simulation results will be printed.
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/121d20ca-5b0b-4b74-a536-e0af1144de31)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/cadafbc6-c63d-4eb7-b9b0-06d6cd7e8646)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/140842d3-16d7-4483-9852-c6ff899d8f62)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/20c3a5dc-d622-453a-82e0-ab53c8611797)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/a57f3cc2-7113-4976-9e4e-9ae9f6d8c147)
 
 Step 14: Observe the Output graph for 0 to 1.4v (Forward bias)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/3393c5aa-30f1-431a-839b-5d263bb9b853)
 
 Step 15: Edit the DC analysis parameters for a sweep range of 0 to -1.4v
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/9deeb714-f1e1-4e9c-a031-6101870e8c15)
 
 Step 16: Observe the Output graph for 0 to -1.4v (Reverse bias)
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/f6d435f9-0044-40f7-a9dc-8d33f47f64b8)
 
 ## Conclusion
