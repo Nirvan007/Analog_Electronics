@@ -1,27 +1,83 @@
-Cadence Virtuoso Basics <a name="TOP"></a>
+Diode Characteristics <a name="TOP"></a>
 ===================
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/80e198dd-7e71-4127-a0ee-0f0920b567cd)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/1c6969c6-d3ae-4d33-8e04-cbc6c4208a4b)
 
 ## Table of Contents
-* [Tool Description](#Tool-Description)
-* [Startup Procedure](#Startup-Procedure)
+* [Description](#Description)
+* [Aim](#Aim)
+* [Calculations](#Calculations)
+* [Procedure](#Procedure)
+* [Schematic](#Schematic)
+* [Netlist](#Netlist)
+* [Analyses](#Analyses)
+  * [DC](#DC)
+  * [AC Transient](#AC-Transient)
 * [References](#References)
 * [Acknowledgement](#Acknowledgement)
 
-## Tool Description
-* The Cadence Virtuoso Layout Suite, part of the Virtuoso Studio, reinvents this industry-leading solution to create trusted analog, digital, and mixed-signal designs. While enabling the “More Than Moore” paradigm with heterogeneous integration, accelerated tool performance and differentiated productivity features enable faster integrated circuit (IC) design convergence with higher quality. Whether it’s device-level, cell-level, chip-level, or system-level design, Virtuoso Layout Suite provides advanced automation capabilities for collaboration, layout planning, placement, and routing with powerful in-design analysis and electrical awareness.
-* Seamlessly integrated with the Virtuoso Schematic Editor and the Virtuoso Analog Design Environment, the Virtuoso Layout Suite enables the creation of quality artwork that is both fast and silicon accurate.
+## Description
+* The schematic and simulation of a P-N junction diode were performed using Cadence Virtuoso Layout Suite in a Linux environment.
 
-## Startup Procedure
-* Start the Linux environment
-* Open the CLI or Terminal using the applications menu
-* Go to the Cadence Virtuoso workspace or work area directory, e.g.: `/project/amsworkspace/amslab68_workspace/virtuoso_wa`
-* In the CLI (Terminal) window we have to give the tool's work area directory location, e.g.: `/project/amsworkspace/amslab68_workspace/virtuoso_wa`
-* In the CLI (Terminal) window we have to give the source for the tool, type the command: “ `source bashrc` ”
-  * NOTE: This command may be different for different versions/organizations
-* In the CLI (Terminal) window we use this command to start the Cadence Virtuoso Tool: “ `virtuoso &` ”
-  * Here `&` is used so that we can add more commands (adding processes) in the terminal while the tool command is running. 
+## Aim
+* To simulate the characteristics of a diode with a constant voltage source of 0.8V DC was used and a 1Kohm resistor in series.
+
+## Theory
+
+
+## Procedure
+* Open the Command Interface and create a new library
+* Give a name to the library (eg. `ACD_June23_batch`)
+* Select the “`attach to an existing technology`” node option
+* Select the "`gpdk 90nm`" technology node
+* Select the cell
+* Add a new cell by going to the "`files/new/cell`" option
+* Give a name to the cell (`eg. test_schematic`) and click “`OK`” keeping all other options as default.
+* After clicking on the “`OK`” button, the schematic will open
+* To get an instance, click the “`I`” button on the keyboard which will open the instance tab
+* Search the required component in the cell option and click the “`symbo`l” option.
+* Now there will be a component floating in the matrix
+* Press “`ESC`” to deselect the component
+* Select multiple by holding "`left click`" on the mouse and delete using the delete option
+* Press "`F`" to fit (zoom) the component
+* Press "`W`" for wire
+* To copy the component click “`C`” and then tap the component that has to be copied.
+* To move the components click “`M`” on the keyboard and then tap on the component
+* Tap on the component and Press “`Q`” to change the parameters
+* To open the simulation tab, go to the “`Launch`” option on the top left and select the “`ADE L`” option
+* Right-click on the “`design variables window`” and select the “`copy from cell view`” option
+* Click on the "`AC/DC/Trans analyses`" option on the top right
+* To save the parameters or state, go to the “`Sessions`” option and then click the “`save state`” option
+* Save the file in the required directory (`eg. ACD_June23_batch/test_schematic_/spectre/saved_state1`)
+* To change the simulator, go to the "`setup`" option and then select the simulator option
+* For high-performance simulations go to high-performance simulations in the setup option then APS (uses multiple licenses and multi-threading)
+* Temperature can also be changed using the "`temp C`" option
+* To save the outputs, go to "`outputs`" and select the specific saving only the required outputs. All can also be saved but takes more time
+* To perform a simulation, go to the “`Simulation`” option and then click the “`Netlist and Run`” option
+* The simulation will begin and then it will print the outputs in another tab
+* To set the initial conditions, select the net and set net with a initial condition and then assign the value
+
+## Schematic
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/dc91eb91-faa0-4a91-a3c1-4239b302f577)
+
+## Netlist
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/979bb477-4d9b-4fba-a873-b92f3e10ff96)
+
+## Analyses
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/c8945ee2-221d-40ef-84bc-25117df56fa3)
+
+### DC
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/bc5561ab-cc39-422a-9c4e-c8e55b93b106)
+
+### AC Transient
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/08148d57-24fa-41d0-b471-66ece271dd83)
+
+## Output VTC Graph
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/48ac65c5-dd8a-4f2b-a36f-905e3e3bd5e3)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/5baa6c75-1fc2-4ce7-910f-ca6346a1b42a)
+
+## Conclusion
+* As calculated in theory, the practical simulation results were the same, that is after a transient analysis of 1ms delay, the capacitor charges linearly until it reaches the 1V mark.
 
 ## References
  - [1] https://www.takshila-vlsi.com/product/analog-circuit-design/
