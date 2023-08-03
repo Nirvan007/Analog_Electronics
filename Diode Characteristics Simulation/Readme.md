@@ -4,16 +4,11 @@ Diode Characteristics <a name="TOP"></a>
 ## Table of Contents
 * [Description](#Description)
 * [Aim](#Aim)
-* [Calculations](#Calculations)
+* [Theory](#Theory)
 * [Procedure](#Procedure)
-* [Schematic](#Schematic)
-* [Netlist](#Netlist)
-* [Analyses](#Analyses)
-  * [DC](#DC)
-  * [AC Transient](#AC-Transient)
 * [Source](#Source)
+* [Procedure](#Procedure)
 * [References](#References)
-* [Acknowledgement](#Acknowledgement)
 
 ## Description
 * The schematic and simulation of a P-N junction diode were performed using Cadence Virtuoso Layout Suite in a Linux environment.
