@@ -5,7 +5,6 @@ Diode Characteristics <a name="TOP"></a>
 * [Description](#Description)
 * [Aim](#Aim)
 * [Theory](#Theory)
-* [Procedure](#Procedure)
 * [Source](#Source)
 * [Procedure](#Procedure)
 * [References](#References)
