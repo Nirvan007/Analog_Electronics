@@ -17,12 +17,12 @@ The repository is organized into separate folders for each simulation, making it
 To make the most of this repository, a basic understanding of electronics and analog circuit theory is recommended. Additionally, familiarity with simulation software like Cadence Virtuoso or SPICE (Simulation Program with Integrated Circuit Emphasis) will be beneficial for running the simulations.
 
 ## Installation and Usage
-To access the content in this repository, simply clone the repository to your local machine: git clone https://github.com/your-username/analog-electronic-simulations.git
+To access the content in this repository, simply clone the repository to your local machine: git clone https://github.com/Nirvan007/Analog_Electronics.git
 
 Each simulation folder contains individual README files with specific instructions on setting up the simulations and running them using the supported software.
 
 ## Contributions
-Contributions to this repository are highly encouraged and appreciated. If you have new simulation examples, improvements to existing content, or bug fixes, feel free to submit a pull request. Please follow the guidelines outlined in the CONTRIBUTING.md file.
+Contributions to this repository are highly encouraged and appreciated. If you have new simulation examples, improvements to existing content, or bug fixes, feel free to submit a pull request.
 
 ## License
 This repository is not licensed. You are free to use and distribute the content, as long as the original attribution is retained.
