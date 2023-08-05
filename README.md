@@ -1,4 +1,4 @@
-# Analog Electronic Simulations Repository
+# Analog Electronics
 
 Welcome to the Analog Electronic Simulations repository! This repository is dedicated to exploring the practical aspects of analog electronic circuits and Analog VLSI design. It contains a collection of simulations, tutorials, circuits, and the theory related to analog circuits.
 
