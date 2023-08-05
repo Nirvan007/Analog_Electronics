@@ -69,11 +69,11 @@ Step 3: Create a new cell view using the library manager window (File -> New ->C
 
 Step 4: Start placing the components from the built-in analoglib component library.
 Components in the schematic:
-  1.	Diode [ndio]
+  1.	Diode [ndio] (gpdk045)
   2.	Voltage source [vdc] = vd (analoglib) {V = 0.8v to be set in ADE L}
   3.	Ground [gnd] (analoglib)
   4.	Resistor [res] = 1K (analoglib)
-  5.	
+
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/93e7e361-e0b8-449a-82f5-61df630c5ae3)
 
 Step 6: Connect the components as per the following circuit diagram.
