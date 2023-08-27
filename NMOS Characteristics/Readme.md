@@ -1,7 +1,7 @@
-Cadence Virtuoso Basics <a name="TOP"></a>
+NMOS Characteristics <a name="TOP"></a>
 ===================
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/80e198dd-7e71-4127-a0ee-0f0920b567cd)
+
 
 ## Table of Contents
 * [Tool Description](#Tool-Description)
