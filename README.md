@@ -18,7 +18,7 @@ To make the most of this repository, a basic understanding of electronics and an
 
 ## Installation and Usage
 To access the content in this repository, simply clone the repository to your local machine: 
-git clone https://github.com/Nirvan007/Analog_Electronics.git
+`git clone https://github.com/Nirvan007/Analog_Electronics.git`
 
 Each simulation folder contains individual README files with specific instructions on setting up the simulations and running them using the supported software.
 
