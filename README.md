@@ -26,7 +26,7 @@ Each simulation folder contains individual README files with specific instructio
 Contributions to this repository are highly encouraged and appreciated. If you have new simulation examples, improvements to existing content, or bug fixes, feel free to submit a pull request.
 
 ## License
-This repository is not licensed. You are free to use and distribute the content, as long as the original attribution is retained.
+This repository is not licensed. You are free to use and distribute the content, as long as the original attribution is retained. If you use this repository, please provide a reference so that more people can benefit from this.
 
 ## Feedback and Support
 If you have any questions, feedback, or need support with any of the simulations, feel free to open an issue in the repository. I am here to help and improve this resource together!
