@@ -13,8 +13,6 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 * [Analyses](#Analyses)
   * [DC](#DC)
   * [AC Transient](#AC-Transient)
-* [References](#References)
-* [Acknowledgement](#Acknowledgement)
 
 ## Description
 * The schematic and simulation of a capacitor was performed using Cadence Virtuoso Layout Suite in a Linux environment.
@@ -78,10 +76,3 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 
 ## Conclusion
 * As calculated in theory, the practical simulation results were the same, that is after a transient analysis of 1ms delay, the capacitor charges linearly until it reaches the 1V mark.
-
-## References
- - [1] https://www.takshila-vlsi.com/product/analog-circuit-design/
-
-## Acknowledgement
-#### Mentors
-* Trainers @ Takshila Institue of VLSI Technologies, https://www.takshila-vlsi.com/ 
