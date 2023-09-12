@@ -9,25 +9,23 @@ PMOS Characteristics <a name="TOP"></a>
 * [References](#References)
 
 ## Theory
-* Construction of P-Channel MOSFET
+### Construction of P-Channel MOSFET
 
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/7f032ffb-329d-48b9-bc64-c7f38134e7e3)
 
-* The construction and working of a PMOS is the same as NMOS. A lightly doped n-substrate is taken into which two heavily doped P+ regions are diffused. These two P+ regions act as source and drain. A thin layer of SiO2 is grown over the surface. Holes are cut through this layer to make contact with P+ regions, as shown in the following figure.
+The construction and working of a PMOS is the same as NMOS. A lightly doped n-substrate is taken into which two heavily doped P+ regions are diffused. These two P+ regions act as source and drain. A thin layer of SiO2 is grown over the surface. Holes are cut through this layer to make contact with P+ regions, as shown in the following figure.
 
-* Working of P-Channel MOSFET (Depletion mode)
+### Working of P-Channel MOSFET (Depletion mode)
 
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/2fb69521-934c-40fb-b857-752b93079087)
 
-* The p channel depletion MOSFET construction is reversed to n channel depletion MOSFET. The channel in this MOSFET is pre-build because of the available p-type impurities in it. Once the negative (-) voltage is applied at the gate terminal then the minority charge carriers like electrons in the n-type get attracted towards the p-type channel. In this condition, once a drain is reverse biased then the device begins conducting although, when the negative voltage within the drain is enhanced then it results in the depletion layer formation.
+The p channel depletion MOSFET construction is reversed to n channel depletion MOSFET. The channel in this MOSFET is pre-build because of the available p-type impurities in it. Once the negative (-) voltage is applied at the gate terminal then the minority charge carriers like electrons in the n-type get attracted towards the p-type channel. In this condition, once a drain is reverse biased then the device begins conducting although, when the negative voltage within the drain is enhanced then it results in the depletion layer formation. This region mainly depends on the layer concentration formed because of the holes. The depletion layer’s region width will affect the conductivity value of the channel. So, by variations of the region’s voltage values, the flow of current gets controlled. At last, the gate & the drain will stay at the negative polarity while the source remains at the ‘0’ value.
 
-This region mainly depends on the layer concentration formed because of the holes. The depletion layer’s region width will affect the conductivity value of the channel. So, by variations of the region’s voltage values, the flow of current gets controlled. At last, the gate & the drain will stay at the negative polarity while the source remains at the ‘0’ value.
-
-* Working of P-Channel MOSFET (Enhancement mode)
+### Working of P-Channel MOSFET (Enhancement mode)
 
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/b39b0460-7b1b-4c30-9928-8c102fa1f7ee)
 
-* The p channel enhancement MOSFET is simply designed with a lightly doped n-substrate. Here, two p-type materials with heavily doped are separated through the channel length like ‘L’. The thin silicon dioxide layer is deposited on the substrate which is normally called the dielectric layer. When a negative voltage is applied to the gate (G) terminal then the +ve concentration of the charges will be settled under the dielectric layer due to the capacitance effect. The electrons available at the n substrate because of the repulsive forces will get moved. When a negative voltage is applied at the drain terminal then negative voltage within the drain region decreases the voltage difference between gate & drain decreases, thus, the conductive channel width gets decreased toward the drain region, and current supplies from source to drain. The channel formed within the MOSFET provides resistance to the flow of current from source to drain. Here, the resistance of the channel mainly depends on the side view of the channel & again this channel’s cross-section depends on the negative voltage applied at the gate terminal. Thus the current flow from the source to the drain can be controlled through the voltage applied at the gate terminal so MOSFET is known as a voltage-controlled device. When the hole concentration forms the channel & the flow of current throughout the channel gets improved because of an increase within negative gate voltage, this is known as P – Channel Enhancement MOSFET.
+The p channel enhancement MOSFET is simply designed with a lightly doped n-substrate. Here, two p-type materials with heavily doped are separated through the channel length like ‘L’. The thin silicon dioxide layer is deposited on the substrate which is normally called the dielectric layer. When a negative voltage is applied to the gate (G) terminal then the +ve concentration of the charges will be settled under the dielectric layer due to the capacitance effect. The electrons available at the n substrate because of the repulsive forces will get moved. When a negative voltage is applied at the drain terminal then negative voltage within the drain region decreases the voltage difference between gate & drain decreases, thus, the conductive channel width gets decreased toward the drain region, and current supplies from source to drain. The channel formed within the MOSFET provides resistance to the flow of current from source to drain. Here, the resistance of the channel mainly depends on the side view of the channel & again this channel’s cross-section depends on the negative voltage applied at the gate terminal. Thus the current flow from the source to the drain can be controlled through the voltage applied at the gate terminal so MOSFET is known as a voltage-controlled device. When the hole concentration forms the channel & the flow of current throughout the channel gets improved because of an increase within negative gate voltage, this is known as P – Channel Enhancement MOSFET.
 
 ## Simulation Procedure
 * Step 1: Open the Cadence Virtuoso Design tool.
