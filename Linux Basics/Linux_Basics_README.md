@@ -9,7 +9,6 @@ Linux Basics <a name="TOP"></a>
 * [Linux Commands](#Linux-Commands)
 * [Sources to learn Linux](#Sources-to-learn-Linux)
 * [References](#References)
-* [Acknowledgement](#Acknowledgement)
 
 ## Introduction
 Linux is an open-source operating system which is the first choice of every technocrat. For VLSI Design Engineers also most of the EDA tools are only compatible with Linux. In Linux, we interact with OS majorly with Command-Line Interface (CLI). In beginning, it might look a bit tedious as you have to remember lots of commands and we are addicted to GUI interface but later you will definitely love it.
