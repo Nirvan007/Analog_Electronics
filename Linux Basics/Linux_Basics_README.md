@@ -50,10 +50,5 @@ Linux is used extensively by all of the semiconductor-specific companies for chi
 * TechTarget.com: <https://www.techtarget.com/searchdatacenter/definition/Linux-operating-system>
 
 ## References
- - [1] https://www.takshila-vlsi.com/
- - [2] https://www.javatpoint.com/what-is-linux
- - [3] https://www.linux.com/what-is-linux/
-
-## Acknowledgement
-#### Mentors
-* Trainers @ Takshila Institue of VLSI Technologies, https://www.takshila-vlsi.com/ 
+ - [1] https://www.javatpoint.com/what-is-linux
+ - [2] https://www.linux.com/what-is-linux/
