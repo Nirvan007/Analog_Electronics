@@ -7,7 +7,6 @@ Cadence Virtuoso Basics <a name="TOP"></a>
 * [Tool Description](#Tool-Description)
 * [Startup Procedure](#Startup-Procedure)
 * [References](#References)
-* [Acknowledgement](#Acknowledgement)
 
 ## Tool Description
 * The Cadence Virtuoso Layout Suite, part of the Virtuoso Studio, reinvents this industry-leading solution to create trusted analog, digital, and mixed-signal designs. While enabling the “More Than Moore” paradigm with heterogeneous integration, accelerated tool performance and differentiated productivity features enable faster integrated circuit (IC) design convergence with higher quality. Whether it’s device-level, cell-level, chip-level, or system-level design, Virtuoso Layout Suite provides advanced automation capabilities for collaboration, layout planning, placement, and routing with powerful in-design analysis and electrical awareness.
