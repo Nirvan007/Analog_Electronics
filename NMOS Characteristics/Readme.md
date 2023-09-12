@@ -10,9 +10,8 @@ NMOS Characteristics <a name="TOP"></a>
 * [References](#References)
 
 ## Theory
-* Construction of N-Channel MOSFET
-
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/f889e0d2-9b23-4bbe-82f9-29df876609c5)
+** Construction of N-Channel MOSFET
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/f889e0d2-9b23-4bbe-82f9-29df876609c5)
 
 * A lightly doped P-type substrate is taken into which two heavily doped N-type regions are diffused, which act as source and drain. Between these two N+ regions, occurs diffusion to   form an N-channel, connecting the drain and source. A thin layer of Silicon dioxide (SiO2) is grown over the entire surface and holes are made to draw ohmic contacts for drain and source terminals. A conducting layer of aluminum is laid over the entire channel, upon this SiO2 layer from source to drain which constitutes the gate. The SiO2 substrate is connected to the      common or ground terminals. Because of its construction, the MOSFET has a much smaller chip area than BJT, which is 5% of the occupancy when compared to the bipolar junction transistor. This device can be operated in modes. They are depletion and enhancement modes.
 
