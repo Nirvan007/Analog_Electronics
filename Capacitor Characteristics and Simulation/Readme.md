@@ -12,7 +12,7 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 * [Netlist](#Netlist)
 * [Analyses](#Analyses)
   * [DC](#DC)
-  * [AC Transient](#AC-Transient)
+  * [Transient](#Transient)
 
 ## Description
 * The schematic and simulation of a capacitor was performed using Cadence Virtuoso Layout Suite in a Linux environment.
@@ -67,7 +67,7 @@ Capacitor Voltage Transfer Characteristics <a name="TOP"></a>
 ### DC
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/bc5561ab-cc39-422a-9c4e-c8e55b93b106)
 
-### AC Transient
+### Transient
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/08148d57-24fa-41d0-b471-66ece271dd83)
 
 ## Output VTC Graph
