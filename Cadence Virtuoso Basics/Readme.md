@@ -24,8 +24,4 @@ Cadence Virtuoso Basics <a name="TOP"></a>
   * Here `&` is used so that we can add more commands (adding processes) in the terminal while the tool command is running. 
 
 ## References
- - [1] https://www.takshila-vlsi.com/product/analog-circuit-design/
-
-## Acknowledgement
-#### Mentors
-* Trainers @ Takshila Institue of VLSI Technologies, https://www.takshila-vlsi.com/ 
+ - [1] http://emlab.illinois.edu/ece546/tools/virtuoso.pdf
