@@ -5,7 +5,7 @@ PMOS Characteristics <a name="TOP"></a>
 
 ## Table of Contents
 * [Theory](#Theory)
-* [Simulation Proceduree](#Simulation-Procedure)
+* [Simulation Procedure](#Simulation-Procedure)
 * [References](#References)
 
 ## Theory
