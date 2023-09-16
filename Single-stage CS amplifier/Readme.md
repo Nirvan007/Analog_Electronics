@@ -1,7 +1,7 @@
-NMOS Characteristics <a name="TOP"></a>
+Design of a Single-stage CS NMOS amplifier <a name="TOP"></a>
 ===================
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/740b169c-9395-4215-8259-1e891805f6d0)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/7c65ddd7-b979-447d-a308-9d3885322047)
 
 
 ## Table of Contents
@@ -10,79 +10,268 @@ NMOS Characteristics <a name="TOP"></a>
 * [References](#References)
 
 ## Theory
-* Construction of N-Channel MOSFET
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/f889e0d2-9b23-4bbe-82f9-29df876609c5)
+### What is a Common source amplifier?
 
-* A lightly doped P-type substrate is taken into which two heavily doped N-type regions are diffused, which act as source and drain. Between these two N+ regions, occurs diffusion to   form an N-channel, connecting the drain and source. A thin layer of Silicon dioxide (SiO2) is grown over the entire surface and holes are made to draw ohmic contacts for drain and source terminals. A conducting layer of aluminum is laid over the entire channel, upon this SiO2 layer from source to drain which constitutes the gate. The SiO2 substrate is connected to the      common or ground terminals. Because of its construction, the MOSFET has a much smaller chip area than BJT, which is 5% of the occupancy when compared to the bipolar junction transistor. This device can be operated in modes. They are depletion and enhancement modes.
+A common-source (CS) MOSFET amplifier is a type of electronic circuit that uses a MOSFET to amplify an input AC signal. It's one of the most commonly used amplifier configurations in integrated circuit design.
 
-* Working of N-Channel MOSFET (Depletion mode)
+### Components of a CS amplifier include:
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/21a06ae4-a6fc-4a35-a988-e368a388229f)
+* MOSFET: The heart of the CS amplifier is an n-channel MOSFET. This transistor has three terminals: the gate (G), the drain (D), and the source (S) (The body or the bulk terminal is shorted to the ground). It operates as a voltage-controlled current source.
+* DC Biasing: The CS amplifier sets a specific DC biasing point (also called the Q-point) for the MOSFET. This DC biasing ensures that the transistor is in its active or saturation region. It's important because it allows the transistor to respond to small AC signals while avoiding distortion.
+* Coupling Capacitors: To isolate the DC biasing from the input and output signals, coupling capacitors (Cin and Cout) are used. These capacitors block the flow of DC but allow AC signals to pass through.
 
-* We can observe that, the diffused channel N between two N+ regions, the insulating dielectric SiO2, and the aluminum metal layer of the gate together form a parallel plate capacitor. If the NMOS has to be worked in depletion mode, the gate terminal should be at negative potential while the drain is at positive potential, as shown in the following figure. When no voltage is applied between the gate and the source, some current flows due to the voltage between the drain and the source. Let some negative voltage is applied at VGG. Then the minority carriers i.e. holes, get attracted and settle near the SiO2 layer. But the majority of carriers, i.e., electrons get repelled. With some amount of negative potential at VGG a certain amount of drain current ID flows from source to drain. When this negative potential is further increased, the electrons get depleted and the current ID decreases. Hence the more negative the applied VGG, the lesser the value of the drain current ID will be. The channel nearer to the drain gets more depleted than at the source like in FET and the current flow decreases due to this effect. Hence it is called depletion mode MOSFET.
+### Working of a CS amplifier
 
-* Working of N-Channel MOSFET (Enhancement mode)
+The MOSFET is biased by setting a fixed DC voltage at its gate (VGS). This voltage determines the operating point of the transistor. By adjusting VGS and other components, we set the Q-point to ensure that the transistor operates in its active or saturation region, typically with a small drain current (ID).
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/79e1c1d5-a3a2-4fbf-8c7c-cd82192aad11)
+When an AC signal (usually a small voltage variation around the DC bias) is applied to the gate of the MOSFET, it creates an AC voltage at the transistor's gate called VGS(ac).
+VGS(ac) causes a small variation in the drain current (ID). This change in ID is directly proportional to the change in VGS(ac) and is governed by the transistor's transconductance (gm).
 
-* The same MOSFET can be worked in enhancement mode, if we can change the polarities of the voltage VGG. So, let us consider the MOSFET with gate-source voltage VGG being positive as shown in the following figure. When no voltage is applied between gate and source, some current flows due to the voltage between drain and source. Let some positive voltage is applied at VGG. Then the minority carriers i.e. holes, get repelled and the majority carriers i.e. electrons get attracted towards the SiO2 layer. With some amount of positive potential at VGG a certain amount of drain current ID flows from source to drain. When this positive potential is further increased, the current ID increases due to the flow of electrons from the source, and these are pushed further due to the voltage applied at VGG. Hence the more positive the applied VGG, the more the value of drain current ID will be. The current flow gets enhanced due to the increase in electron flow better than in depletion mode. Hence this mode is termed as Enhanced Mode MOSFET.
+The variation in Id creates a voltage drop across the drain resistor (RD) according to Ohm's law (VD = ID * RD). The output voltage (Vout) is taken from this voltage drop across RD. Therefore, Vout represents the amplified AC version of the input signal.
+
+The input coupling capacitor (Cin) blocks any DC component from reaching the gate, ensuring that only the AC signal gets amplified. The output coupling capacitor (Cout) blocks the DC component from the output, providing only the AC amplified signal to the load or the next stage of the circuit.
+
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/fda0b1c7-3049-45cb-b6f6-1726173f4577)
+
+### How to find out gain Av?
+
+#### Method 1:
+By using Vout equation
+Vout = VDD - IDRD  ------------------------------------------------------------------- [ro is not considered here]
+
+Vout = VDD - {1/2 * UnCox * W/L * (VGS - VTH)2 * (1 + λVDS)} * RD
+
+Differentiating on both sides, we get,
+(δ Vout)/(δ Vin) = 0 - {1/2 * UnCOX * W/L * 2(VGS - VTH) * RD}
+
+(δ Vout)/(δ Vin) =  - UnCOX * W/L * (VGS - VTH) * RD
+
+(δ Vout)/(δ Vin) = -gm * RD --------------------------------------------------- [Since gm = UnCOX * W/L * (VGS - VTH)]
+
+AV = -gm * RD
+
+#### Method 2:
+By the small signal model
+
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/8de9f256-9c9d-4348-b821-df830400386c)
+
+Applying KCL at drain node, we get,
+
+gmVin + Vout/ro + Vout / RD = 0
+
+gmVin = - Vout * ( 1/ro + 1 / RD )
+
+Vout/Vin = - gm / (1/ro + 1 / RD)
+
+Vout/Vin = - gm * RD || ro
+
+AV = - gm * RD || to
+
+## Let’s design our own single-stage common source amplifier!
+
+### Specifications:
+Design a single-stage common source amplifier for a gain of -3 where the input signal is a sine wave of 100KHz having 2mV pp amplitude with a DC voltage of 0.6V. The supply voltage provided is 1.8V and the drain current must be less than 10uA. Design the schematic and simulate using transient, DC, and sweep analysis.
+
+Changes: Add source degeneration to increase the gain if the gain is less than -3 and change the W/L ratio keeping ID less than 10uA.
+
+### Design:
+#### Parameters given:
+Av = -3
+Vin(DC) = 0.6V
+Vin(ss) = 10KHz 2mVpp sine wave
+VDD = 1.8V
+ID < 10uA
+
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/7324e60b-d662-40a8-bd12-fee5b69bd523)
+
+#### Select the NMOS device for the design: 
+Here the NMOS2v_3 device in the gpdk045 library can be selected which has 3 terminals (bulk is shorted to GND).
+
+VTH ≈ 0.450V
+UnCox ≈ 250 uS/V2 
+
+Note: These values have been calculated by keeping the W/L ratio as 1/1 with a measurement of 1um/1um for the Length and Width of the MOSFET.
+
+#### Calculate the Vout for this CS amplifier: 
+Here the Vout can be calculated by using the formula for gain Av, where,
+
+Av = -gm * (RD || ro)
+Av = -gm * RD ------------------------------------------------------------------------ [Since ro << ]
+Av = -(2 * ID / VDS) * RD  ----------------------------------------------------------- [Since gm = (2 * ID / VDS)]
+Av = -{(2 * ID) / (VGS - VTH)} * RD ------------------------------------------------- [Since VDS ≥ (VGS - VTH)]
+
+Av = -(2 * IDRD) / (VGS - VTH)
+VD = IDRD = - {Av * (VGS - VTH)} / 2
+VD = - {-3 * (0.600 - 0.450)} / 2
+VD = 0.225V
+
+Vout = VDD - (IDRD)
+Vout = VDD - VD
+Vout = 1.8 - 0.225
+Vout = 1.575V
+
+To maintain the MOSFET in saturation,
+VDS ≥ (VGS - VTH)
+VDS ≥ (0.600 - 0.450)
+VDS ≥ 0.150
+
+#### Calculate the approximate value of Gm,
+gm = (2 * ID) / VDS = (2 * 10u) / 0.150
+gm = 133.33 uS
+
+#### Calculate the approximate value of Rout,
+Rout = RD || ro
+Rout = RD  ------------------------------------------------------------------- [Since we are not considering ro]
+RD = VD / ID 
+RD = 0.225 / 10u 
+RD = 22.5KΩ
+
+#### Calculate the W/L ratio for the MOSFET
+Now that we have all the required values, we have to calculate the W/L value for the MOSFET:
+Here we use the channel length modulation equation for ID,
+
+ID = 1/2 * UnCox * W/L * (VGS - VTH)2 * (1 + λVDS)
+ID = 1/2 * UnCox * W/L * (VGS - VTH)2 ---------------------------------------------------- [Consider λ = 0]
+
+10u = 1/2 * 250u * W/L * (0.600 - 0.450)2
+W/L = (10u * 2) / {250u * (0.600 - 0.450)2}
+W/L = 3.56
+W = L * 3.56
 
 ## Simulation Procedure
 * Step 1: Open the Cadence Virtuoso Design tool.
 * Step 2: Create a new library using the CIW window (File -> New -> Library). Attach this library to the gpdk045nm technology node, or any other technology node.
 * Step 3: Create a new cell view using the library manager window (File -> New ->Cell View).
-  
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/e256e176-e8b6-4fca-ba14-94e997f9a5d2)
-  
-* Step 4: Start placing the components from the built-in analoglib component library.
+* Step 4: Place the components from the built-in analoglib component library.
   Components in the schematic:
-  1.	NMOS [nmos2v] (gpdk045)
-  2.	Voltage source VGS [vdc] = 1.8V (analoglib) 
-  3.	Voltage source VDS [vdc] = 1.8V (analoglib)
-  4.	Ground [gnd] (analoglib)
+  1.	NMOS [nmos2v_3] (gpdk045)
+  2.	Resistor RD = 22.5KΩ (analoglib)
+  3.	Voltage source VGS [vdc] = 1.8V (analoglib) / Add a vin input pin which has to be given a stimuli
+  4.	Voltage source VDS [vdc] = 1.8V (analoglib) / Add a vdd input pin which has to be given a stimuli
+  5.	Add a vout output pin which has to be given a stimuli
+  6.	Ground [gnd] (analoglib)
 
- Create the schematic as per the following circuit diagram:
+Create the schematic as per the following circuit diagram:
+Case 1:
+L = 200nm
+W = 200n * 3.56 = 712nm 
+W ≈ 720nm
 
- ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/1830558c-4c6c-4549-9d43-7fbc9d0d7775)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/7f24fd57-ce77-40fb-aaa7-6a4e10dae6e7)
 
 * Step 5: Launch ADE L for simulation
-* Step 6: Choose the analysis method and select the DC analysis and check the “save DC operating points” option.
+* Step 6: Choose the analysis method, select the DC analysis, and check the “save DC operating points” option.
+* Step 7: Choose the analysis method, select the Transient analysis, and set the value to 100us. Also, check the moderate-type simulation option.
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/057e0742-5fd0-4645-bbe5-7d6e27a4aad0)
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/534e9457-bf2c-4171-a5f8-ef6c6ec1f01e)
 
-* Step 7: Check the “Component Parameter” option and select the component “VGS” on the schematic. Set the sweep range from 0 to 1.8.
+* Step 8: Select the “outputs” menu and then “To be plotted on schematic” option and select the vin pin and vout pin. You can select the drain terminal of the NMOS to see the ID waveform as well.
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/40fb246a-4352-4191-b5a8-c21903fd286c)
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/b56bcc9f-0196-4451-8eed-04b5a7f43966)
 
-* Step 8: Select the “outputs” menu and then “To be plotted on schematic” option and select the NMOS Drain terminal.
+* Step 9: Set the stimuli.
+
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/bbfa1447-78e4-4355-912d-7fa244275bc5)
+
+* Step 10: Click the netlist and run option (green play button). The simulation will start, and the simulation results will be printed. (Annotate results in the ADE L must be selected to view the DC operating points)
+
+* Step 11: Output waveforms for the CS amplifier's vin, vout, and ID.
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/e5f76407-f835-4936-b8bf-05a3dbdc9d7a)
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/2addb7b9-8a90-41ef-a656-8ef2fdb9b04e)
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/489030f2-a99e-4516-90cc-d70f52a2e0be)
 
-* Step 9: Create a netlist.
+  Output calculations:
+  ID = 8.703uA
+  gm = 102.658uS
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/668ac281-85e6-4a73-a6e4-f7bfad763ba4)
-
-* Step 10: Go back to the ADE L and hit the netlist and run option (green play button). The simulation will start, and the simulation results will be printed.
+  δ Vout = 1.60651 - 1.60215
+  δ Vout = 4.36 mV pp
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/88958dd1-25f8-4ac8-a0d0-dd2100361757)
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/8a8778c1-4dcd-4b30-ba04-9dad3dfd0152)
-
-* Step 11: Output I-V Characteristic (Id vs Vgs) graph for the NMOS with a sweep range of 0 to 1.8V.
+  δ Vin = 0.60100 - 0.59900
+  δ Vin = 2mV pp
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/8437a456-3ccf-403a-bbe0-97418cde8e7c)
-
-* Step 12: Check the “Component Parameter” option and select the component “VDS” on the schematic. Set the sweep range from 0 to 1.8.
+  AV = (δ Vout)/(δ Vin) = 4.36/2
+  AV = -2.18
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/384d73a0-cab2-41d6-b082-562f86eb8b0b)
-
-* Step 13: Select the “outputs” menu and then “To be plotted on schematic” option and select the NMOS Drain terminal.
+  Here the gain was expected to be -3, but we are getting a gain of only -2.18. 
+  This is because we have not considered the ro which is parallel to the resistor RD which in total constitutes Rout. 
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/58fa86a8-c213-4177-9392-1c8f4c93a482)
+  What can we do to increase AV?
+  To increase the gain, the Rout parameter can be adjusted. Which is, the Rout that can be increased by increasing the value of resistor RD to 25KΩ.
 
-* Step 14: Output I-V Characteristic (Id vs Vds) graph for the NMOS with a sweep range of 0 to 1.8V.
+* Step 12: We increase the value of resistor RD to 25KΩ
+  Output waveform when R = 25KΩ:
+
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/94904888-c409-4e12-9d14-eb89c9554a12)
+
+  Output calculations:
+  ID = 8.659uA
+  gm = 102.339uS
   
-  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/84912f17-24ba-43aa-83bd-846f695c742b)
+  δ Vout = 1.58595 - 1.58115
+  δ Vout = 4.8 mV pp
+  
+  δ Vin = 0.60100 - 0.59900
+  δ Vin = 2mV pp
+  
+  AV = (δ Vout)/(δ Vin) = 4.80/2
+  AV = -2.4
+  
+  
+  Q: So is there any way that we can increase the gain a bit more?
+  A: Yes, there is a way that we can increase the gain without changing the Rout of the circuit. We can increase the sizing of the MOSFET which will increase the gm and ro of the MOSFET     which will in turn increase the gain.
 
+* Step 13: Increase the W & L of the NMOS
+
+  Case 2: Now we take the W and L values as,
+  L = 300nm
+  W = 300n * 3.56 = 1068nm 
+  W ≈ 1um
+
+* Step 14: Plot the Output waveform when L = 300nm and W = 1um:
+
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/4b43bc7c-4dea-4225-90a3-fcc0d79a673c)
+
+  Output calculations:
+  ID = 9.547uA
+  gm = 108.623uS
+  
+  δ Vout = 1.5613 - 1.55875
+  δ Vout = 5.11 mV pp
+  
+  δ Vin = 0.60100 - 0.59900
+  δ Vin = 2mV pp
+  
+  AV = (δ Vout)/(δ Vin) = 5.11/2
+  AV = -2.56
+  
+* Step 15: Increase the W & L a bit more,
+
+ Case 3: Now, since there is still room for improvement, we double the initial W and L values from 200nm and 720nm to,
+  L = 400nm
+  W = 200n * 3.56 = 712nm 
+  W ≈ 1.5um
+  
+  Output waveform when L = 400nm and W = 1.5um:
+
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/c2d44466-45f6-48e5-a4aa-febd43db908e)
+
+  ID = 11.768uA
+  gm = 131.037uS
+  
+  δ Vout = 1.5091 - 1.5029
+  δ Vout = 6.2 mV pp
+  
+  δ Vin = 0.60100 - 0.59900
+  δ Vin = 2mV pp
+  
+  AV = (δ Vout)/(δ Vin) = 6.2/2
+  AV = -3.1
+  
+  Here the gain has come out to be higher than expected, that is, -3.1. But if you look carefully, the ID has increased to 11.768uA which is above the permissible design limit of 10uA.
+  
+## ConclusionTherefore, the maximum gain that can be achieved with these specifications is approximately -2.56. There is still more room for improvement in this design, but to keep this analysis short I will be ending it here!
+ 
 ## References
- - [1] https://www.tutorialspoint.com/basic_electronics/basic_electronics_mosfet.htm
+ - [1] Behzad Razavi - Design of Analog CMOS Integrated Circuits
