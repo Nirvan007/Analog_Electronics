@@ -6,7 +6,7 @@ Design of a Single-stage CS NMOS amplifier <a name="TOP"></a>
 
 ## Table of Contents
 * [Theory](#Theory)
-* [Design Example](#Design_Example)
+* [Design Example](#Design-Example)
 * [Procedure](#Procedure)
 * [Conclusion](#Conclusion)
 * [References](#References)
