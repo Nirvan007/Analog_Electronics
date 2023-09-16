@@ -41,7 +41,7 @@ The input coupling capacitor (Cin) blocks any DC component from reaching the gat
 By using Vout equation
 Vout = VDD - IDRD  ------------------------------------------------------------------- [ro is not considered here]
 
-Vout = VDD - {1/2 * UnCox * W/L * (VGS - VTH)2 * (1 + λVDS)} * RD
+Vout = VDD - {1/2 * UnCox * W/L * sq(VGS - VTH) * (1 + λVDS)} * RD
 
 Differentiating on both sides, we get,
 
@@ -81,7 +81,7 @@ Changes: Add source degeneration to increase the gain if the gain is less than -
 #### Parameters given:
 * Av = -3
 * Vin(DC) = 0.6V
-* Vin(ss) = 10KHz 2mVpp sine wave
+* Vin(ss) = 100KHz 2mVpp sine wave
 * VDD = 1.8V
 * ID < 10uA
 
@@ -149,13 +149,13 @@ RD = 22.5KΩ
 Now that we have all the required values, we have to calculate the W/L value for the MOSFET:
 Here we use the channel length modulation equation for ID,
 
-ID = 1/2 * UnCox * W/L * (VGS - VTH)2 * (1 + λVDS)
+ID = 1/2 * UnCox * W/L * sq(VGS - VTH) * (1 + λVDS)
 
-ID = 1/2 * UnCox * W/L * (VGS - VTH)2 ---------------------------------------------------- [Consider λ = 0]
+ID = 1/2 * UnCox * W/L * sq(VGS - VTH) ---------------------------------------------------- [Consider λ = 0]
 
-10u = 1/2 * 250u * W/L * (0.600 - 0.450)2
+10u = 1/2 * 250u * W/L * sq(0.600 - 0.450)
 
-W/L = (10u * 2) / {250u * (0.600 - 0.450)2}
+W/L = (10u * 2) / {250u * sq(0.600 - 0.450)}
 
 W/L = 3.56
 
