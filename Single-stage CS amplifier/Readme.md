@@ -6,11 +6,12 @@ Design of a Single-stage CS NMOS amplifier <a name="TOP"></a>
 
 ## Table of Contents
 * [Theory](#Theory)
+* [Design Example](#Design_Example)
 * [Procedure](#Procedure)
+* [Conclusion](#Conclusion)
 * [References](#References)
 
 ## Theory
-
 ### What is a Common source amplifier?
 
 A common-source (CS) MOSFET amplifier is a type of electronic circuit that uses a MOSFET to amplify an input AC signal. It's one of the most commonly used amplifier configurations in integrated circuit design.
@@ -68,14 +69,14 @@ Vout/Vin = - gm * RD || ro
 
 AV = - gm * RD || to
 
-## Let’s design our own single-stage common source amplifier!
+## Design Example:
+Let’s design our own single-stage common source amplifier!
 
 ### Specifications:
 Design a single-stage common source amplifier for a gain of -3 where the input signal is a sine wave of 100KHz having 2mV pp amplitude with a DC voltage of 0.6V. The supply voltage provided is 1.8V and the drain current must be less than 10uA. Design the schematic and simulate using transient, DC, and sweep analysis.
 
 Changes: Add source degeneration to increase the gain if the gain is less than -3 and change the W/L ratio keeping ID less than 10uA.
 
-### Design:
 #### Parameters given:
 Av = -3
 Vin(DC) = 0.6V
@@ -271,7 +272,8 @@ W ≈ 720nm
   
   Here the gain has come out to be higher than expected, that is, -3.1. But if you look carefully, the ID has increased to 11.768uA which is above the permissible design limit of 10uA.
   
-## ConclusionTherefore, the maximum gain that can be achieved with these specifications is approximately -2.56. There is still more room for improvement in this design, but to keep this analysis short I will be ending it here!
+## Conclusion: 
+Therefore, the maximum gain that can be achieved with these specifications is approximately -2.56. There is still more room for improvement in this design, but to keep this analysis short I will be ending it here!
  
 ## References
  - [1] Behzad Razavi - Design of Analog CMOS Integrated Circuits
