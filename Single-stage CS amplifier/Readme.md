@@ -98,9 +98,12 @@ Note: These values have been calculated by keeping the W/L ratio as 1/1 with a m
 #### Calculate the Vout for this CS amplifier: 
 Here the Vout can be calculated by using the formula for gain Av, where,
 
-Av = -gm * (RD || ro)
-Av = -gm * RD ------------------------------------------------------------------------ [Since ro << ]
+Av = -gm * (RD || to)
+
+Av = -gm * RD ------------------------------------------------------------------------ [Since to << ]
+
 Av = -(2 * ID / VDS) * RD  ----------------------------------------------------------- [Since gm = (2 * ID / VDS)]
+
 Av = -{(2 * ID) / (VGS - VTH)} * RD ------------------------------------------------- [Since VDS ≥ (VGS - VTH)]
 
 Av = -(2 * IDRD) / (VGS - VTH)
@@ -108,27 +111,38 @@ Av = -(2 * IDRD) / (VGS - VTH)
 VD = IDRD = - {Av * (VGS - VTH)} / 2
 
 VD = - {-3 * (0.600 - 0.450)} / 2
+
 VD = 0.225V
 
 Vout = VDD - (IDRD)
+
 Vout = VDD - VD
+
 Vout = 1.8 - 0.225
+
 Vout = 1.575V
 
 To maintain the MOSFET in saturation,
 VDS ≥ (VGS - VTH)
+
 VDS ≥ (0.600 - 0.450)
+
 VDS ≥ 0.150
 
 #### Calculate the approximate value of Gm,
 gm = (2 * ID) / VDS = (2 * 10u) / 0.150
+
 gm = 133.33 uS
 
 #### Calculate the approximate value of Rout,
-Rout = RD || ro
-Rout = RD  ------------------------------------------------------------------- [Since we are not considering ro]
+Rout = RD || to
+
+Rout = RD  ------------------------------------------------------------------- [Since we are not considering to]
+
 RD = VD / ID 
+
 RD = 0.225 / 10u 
+
 RD = 22.5KΩ
 
 #### Calculate the W/L ratio for the MOSFET
@@ -136,11 +150,15 @@ Now that we have all the required values, we have to calculate the W/L value for
 Here we use the channel length modulation equation for ID,
 
 ID = 1/2 * UnCox * W/L * (VGS - VTH)2 * (1 + λVDS)
+
 ID = 1/2 * UnCox * W/L * (VGS - VTH)2 ---------------------------------------------------- [Consider λ = 0]
 
 10u = 1/2 * 250u * W/L * (0.600 - 0.450)2
+
 W/L = (10u * 2) / {250u * (0.600 - 0.450)2}
+
 W/L = 3.56
+
 W = L * 3.56
 
 ## Simulation Procedure
