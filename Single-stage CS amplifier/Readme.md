@@ -78,11 +78,11 @@ Design a single-stage common source amplifier for a gain of -3 where the input s
 Changes: Add source degeneration to increase the gain if the gain is less than -3 and change the W/L ratio keeping ID less than 10uA.
 
 #### Parameters given:
-Av = -3
-Vin(DC) = 0.6V
-Vin(ss) = 10KHz 2mVpp sine wave
-VDD = 1.8V
-ID < 10uA
+* Av = -3
+* Vin(DC) = 0.6V
+* Vin(ss) = 10KHz 2mVpp sine wave
+* VDD = 1.8V
+* ID < 10uA
 
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/7324e60b-d662-40a8-bd12-fee5b69bd523)
 
