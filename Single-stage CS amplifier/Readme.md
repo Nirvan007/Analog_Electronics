@@ -44,6 +44,7 @@ Vout = VDD - IDRD  -------------------------------------------------------------
 Vout = VDD - {1/2 * UnCox * W/L * (VGS - VTH)2 * (1 + λVDS)} * RD
 
 Differentiating on both sides, we get,
+
 (δ Vout)/(δ Vin) = 0 - {1/2 * UnCOX * W/L * 2(VGS - VTH) * RD}
 
 (δ Vout)/(δ Vin) =  - UnCOX * W/L * (VGS - VTH) * RD
