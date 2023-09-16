@@ -180,6 +180,8 @@ W ≈ 720nm
 * Step 11: Output waveforms for the CS amplifier's vin, vout, and ID.
   
   ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/2addb7b9-8a90-41ef-a656-8ef2fdb9b04e)
+
+  Split the three waveforms by clicking the waveform up and down option, which is next to the "family" dropdown menu option. 
   ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/489030f2-a99e-4516-90cc-d70f52a2e0be)
 
   Output calculations:
