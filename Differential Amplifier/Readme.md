@@ -1,8 +1,7 @@
-PMOS Characteristics <a name="TOP"></a>
+Differential Amplifier (5-Transistor Operational Transconductance Amplifier) <a name="TOP"></a>
 ===================
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/740b169c-9395-4215-8259-1e891805f6d0)
-
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/4e92f4c3-b7f3-42e7-9c41-bc294638cb50)
 
 ## Table of Contents
 * [Theory](#Theory)
@@ -10,23 +9,19 @@ PMOS Characteristics <a name="TOP"></a>
 * [References](#References)
 
 ## Theory
-* Construction of N-Channel MOSFET
+### What is a differential amplifier?
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/f889e0d2-9b23-4bbe-82f9-29df876609c5)
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/ccddb144-d8d7-45d4-a855-ba7dbc6a099a)
 
-* A lightly doped P-type substrate is taken into which two heavily doped N-type regions are diffused, which act as source and drain. Between these two N+ regions, occurs diffusion to   form an N-channel, connecting the drain and source. A thin layer of Silicon dioxide (SiO2) is grown over the entire surface and holes are made to draw ohmic contacts for drain and source terminals. A conducting layer of aluminum is laid over the entire channel, upon this SiO2 layer from source to drain which constitutes the gate. The SiO2 substrate is connected to the      common or ground terminals. Because of its construction, the MOSFET has a much smaller chip area than BJT, which is 5% of the occupancy when compared to the bipolar junction transistor. This device can be operated in modes. They are depletion and enhancement modes.
+* A MOSFET differential amplifier is a type of electronic amplifier that uses Metal-Oxide-Semiconductor Field-Effect Transistors (MOSFETs) as the active devices in its differential pair. The differential amplifier is a fundamental building block in analog circuit design and is commonly used in operational amplifiers, analog integrated circuits, and other applications.
 
-* Working of N-Channel MOSFET (Depletion mode)
+### Why is a differential amplifier used?
 
 ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/21a06ae4-a6fc-4a35-a988-e368a388229f)
 
-* We can observe that, the diffused channel N between two N+ regions, the insulating dielectric SiO2, and the aluminum metal layer of the gate together form a parallel plate capacitor. If the NMOS has to be worked in depletion mode, the gate terminal should be at negative potential while the drain is at positive potential, as shown in the following figure. When no voltage is applied between the gate and the source, some current flows due to the voltage between the drain and the source. Let some negative voltage is applied at VGG. Then the minority carriers i.e. holes, get attracted and settle near the SiO2 layer. But the majority of carriers, i.e., electrons get repelled. With some amount of negative potential at VGG a certain amount of drain current ID flows from source to drain. When this negative potential is further increased, the electrons get depleted and the current ID decreases. Hence the more negative the applied VGG, the lesser the value of the drain current ID will be. The channel nearer to the drain gets more depleted than at the source like in FET and the current flow decreases due to this effect. Hence it is called depletion mode MOSFET.
-
-* Working of N-Channel MOSFET (Enhancement mode)
-
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/79e1c1d5-a3a2-4fbf-8c7c-cd82192aad11)
-
-* The same MOSFET can be worked in enhancement mode, if we can change the polarities of the voltage VGG. So, let us consider the MOSFET with gate-source voltage VGG being positive as shown in the following figure. When no voltage is applied between gate and source, some current flows due to the voltage between drain and source. Let some positive voltage is applied at VGG. Then the minority carriers i.e. holes, get repelled and the majority carriers i.e. electrons get attracted towards the SiO2 layer. With some amount of positive potential at VGG a certain amount of drain current ID flows from source to drain. When this positive potential is further increased, the current ID increases due to the flow of electrons from the source, and these are pushed further due to the voltage applied at VGG. Hence the more positive the applied VGG, the more the value of drain current ID will be. The current flow gets enhanced due to the increase in electron flow better than in depletion mode. Hence this mode is termed as Enhanced Mode MOSFET.
+* Differential amplifiers apply gain not to one input signal but to the difference between two input signals. This means that a differential amplifier naturally eliminates noise or interference that is present in both input signals.
+* Differential amplification also suppresses common-mode signals—in other words, a DC offset that is present in both input signals will be removed, and the gain will be applied only to the signal of interest (assuming, of course, that the signal of interest is not present in both inputs). This is particularly advantageous in the context of IC design because it eliminates the need for bulky DC-blocking capacitors.
+* The subtraction that occurs in a differential pair makes it easy to incorporate the circuit into a negative-feedback amplifier, and if you’ve read the Negative Feedback series, you know that negative feedback is about the best thing that could ever happen to an amplifier circuit.
 
 ## Simulation Procedure
 * Step 1: Open the Cadence Virtuoso Design tool.
@@ -85,4 +80,6 @@ PMOS Characteristics <a name="TOP"></a>
   ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/84912f17-24ba-43aa-83bd-846f695c742b)
 
 ## References
- - [1] https://www.tutorialspoint.com/basic_electronics/basic_electronics_mosfet.htm
+ - [1] [https://www.tutorialspoint.com/basic_electronics/basic_electronics_mosfet.htm](https://www.elprocus.com/differential-amplifier-circuit-using-transistors/)https://www.elprocus.com/differential-amplifier-circuit-using-transistors/
+ - [2] https://www.allaboutcircuits.com/technical-articles/the-basic-mosfet-differential-pair
+ - 
