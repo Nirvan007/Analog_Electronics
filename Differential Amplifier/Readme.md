@@ -17,8 +17,6 @@ Differential Amplifier (5-Transistor Operational Transconductance Amplifier) <a 
 
 ### Why is a differential amplifier used?
 
-![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/21a06ae4-a6fc-4a35-a988-e368a388229f)
-
 * Differential amplifiers apply gain not to one input signal but to the difference between two input signals. This means that a differential amplifier naturally eliminates noise or interference that is present in both input signals.
 * Differential amplification also suppresses common-mode signals—in other words, a DC offset that is present in both input signals will be removed, and the gain will be applied only to the signal of interest (assuming, of course, that the signal of interest is not present in both inputs). This is particularly advantageous in the context of IC design because it eliminates the need for bulky DC-blocking capacitors.
 * The subtraction that occurs in a differential pair makes it easy to incorporate the circuit into a negative-feedback amplifier, and if you’ve read the Negative Feedback series, you know that negative feedback is about the best thing that could ever happen to an amplifier circuit.
