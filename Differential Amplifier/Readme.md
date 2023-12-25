@@ -22,6 +22,9 @@ A MOSFET differential amplifier is a type of electronic amplifier that uses Meta
 * Differential amplification also suppresses common-mode signals—in other words, a DC offset that is present in both input signals will be removed, and the gain will be applied only to the signal of interest (assuming, of course, that the signal of interest is not present in both inputs). This is particularly advantageous in the context of IC design because it eliminates the need for bulky DC-blocking capacitors.
 * The subtraction that occurs in a differential pair makes it easy to incorporate the circuit into a negative-feedback amplifier, and if you’ve read the Negative Feedback series, you know that negative feedback is about the best thing that could ever happen to an amplifier circuit.
 
+## Specifications for the Design
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/4ddb0e2e-1cf4-4def-87f4-9e46a90494a6)
+
 ## Simulation Procedure
 * Step 1: Open the Cadence Virtuoso Design tool.
 * Step 2: Create a new library using the CIW window (File -> New -> Library). Attach this library to the gpdk045nm technology node, or any other technology node.
@@ -31,12 +34,12 @@ A MOSFET differential amplifier is a type of electronic amplifier that uses Meta
   *  NMOS [nmos2v] (gpdk045)
   *  PMOS [pmos2v] (gpdk045)
   *  Voltage source VDD [vdd] = 1.8V (analoglib)
-  *  Voltage source Vin [vin] = 0.9V DC + 1mV 100KHz Sine Wave (analoglib)
+  *  Voltage source Vin [vin] = 0.7V DC + 1mV 1KHz Sine Wave (analoglib)
   *  Current source Iref [Iref] = 10uA (analoglib)
   *  Ground [gnd] (analoglib)
 
  Create the schematic as per the following circuit diagram:
-
+![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/2db1e5d5-75b4-4344-8c2b-04ec4228ba30)
 
 * Step 5: Launch ADE L for simulation
 * Step 6: Choose the analysis method, then select the DC analysis and check the “save DC operating points” option.
@@ -50,7 +53,13 @@ A MOSFET differential amplifier is a type of electronic amplifier that uses Meta
 * Step 12: To get a sweep for any of the DC simulations, set the sweep range of any parameter such as Vdd from 0 to 1.8V or temperature from -50C to 125C.
 
 ## Outputs
+* DC Operating Point Simulation: 5-T OTA (Vout = 0.7V; VinDC = 1.2V, VinAC = 1KHz Sine wave w/2mVpp amplitude)
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/6b4d1f92-e04e-47bd-bf80-5630d3ff3a95)
+  Resultant DC operating points of a 5T-OTA
 
+* 5-T OTA Transient simulation [0-10ms] (VinDC = 700mV, VinAC = 1KHz Sine wave w/2mVpp amplitude): [Gain = 52.6]
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/27d9597f-c0c5-423f-84b5-42d1b7c5b158)
+  Resultant waveforms for the Vin+, Vin- & Vout of a 5T-OTA
 
 ## References
  - [1] [https://www.tutorialspoint.com/basic_electronics/basic_electronics_mosfet.htm](https://www.elprocus.com/differential-amplifier-circuit-using-transistors/)https://www.elprocus.com/differential-amplifier-circuit-using-transistors/
