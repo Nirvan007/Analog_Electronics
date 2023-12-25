@@ -62,6 +62,16 @@ A MOSFET differential amplifier is a type of electronic amplifier that uses Meta
 
   Resultant waveforms for the Vin+, Vin- & Vout of a 5T-OTA
 
+#### 5-T OTA AC Response simulation [1-10GHz]: [Gain = 52.73]
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/588c9302-41f6-4136-87bf-5fa95d0852fc)
+
+  Resultant waveforms for the AC Response of a 5T-OTA
+
+#### 5-T OTA Stability response (1 to 100GHz) - Magnitude and Phase plots: (LG = 28.31dB; PM = 90.91°; UGB at 412.78MHz):
+  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/a2c22921-344a-44bb-a85a-c6fe17b3de9e)
+
+  Resultant waveforms for the Stability Response of a 5T-OTA
+
 ## References
  - [1] [https://www.tutorialspoint.com/basic_electronics/basic_electronics_mosfet.htm](https://www.elprocus.com/differential-amplifier-circuit-using-transistors/)https://www.elprocus.com/differential-amplifier-circuit-using-transistors/
  - [2] https://www.allaboutcircuits.com/technical-articles/the-basic-mosfet-differential-pair
