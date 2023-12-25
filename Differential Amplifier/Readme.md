@@ -5,6 +5,7 @@ Differential Amplifier (5-Transistor Operational Transconductance Amplifier) <a 
 
 ## Table of Contents
 * [Theory](#Theory)
+* [Specifications for the Design](#Specifications-for-the-Design)
 * [Simulation Procedure](#Simulation-Procedure)
 * [Outputs](#Outputs)
 * [References](#References)
