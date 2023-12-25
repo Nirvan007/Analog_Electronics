@@ -52,12 +52,12 @@ A MOSFET differential amplifier is a type of electronic amplifier that uses Meta
 * Step 12: To get a sweep for any of the DC simulations, set the sweep range of any parameter such as Vdd from 0 to 1.8V or temperature from -50C to 125C.
 
 ## Outputs
-* DC Operating Point Simulation: 5-T OTA (Vout = 0.7V; VinDC = 1.2V, VinAC = 1KHz Sine wave w/2mVpp amplitude)
+#### DC Operating Point Simulation: 5-T OTA (Vout = 0.7V; VinDC = 1.2V, VinAC = 1KHz Sine wave w/2mVpp amplitude)
   ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/6b4d1f92-e04e-47bd-bf80-5630d3ff3a95)
 
   Resultant DC operating points of a 5T-OTA
 
-* 5-T OTA Transient simulation [0-10ms] (VinDC = 700mV, VinAC = 1KHz Sine wave w/2mVpp amplitude): [Gain = 52.6]
+#### 5-T OTA Transient simulation [0-10ms] (VinDC = 700mV, VinAC = 1KHz Sine wave w/2mVpp amplitude): [Gain = 52.6]
   ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/27d9597f-c0c5-423f-84b5-42d1b7c5b158)
 
   Resultant waveforms for the Vin+, Vin- & Vout of a 5T-OTA
