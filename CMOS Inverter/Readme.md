@@ -64,9 +64,9 @@ The applications of CMOS inverters include the following.
  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/8170cd95-7de9-4024-8b05-7b5c0eb0daa6)
 
  Create a symbol as per the following diagram:
+ 
  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/926eb914-0c52-4e95-b715-01f05259e224)
 
- 
  Create a testbench using the symbol as per the following diagram:
  ![image](https://github.com/Nirvan007/Analog_Electronics/assets/127144315/475df34f-e541-4905-9442-85b8a99272c0)
 
